@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">DriveSafe</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Landing page</string>
+    <string name="second_fragment_label">Home Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="AppName">DriveSafe</string>
+    <string name="AppDescription">Because, It pays off</string>
+    <string name="drivesafelogo">DriveSafeLogo</string>
+    <string name="dashboard">DASHBOARD</string>
+    <string name="report">Report</string>
+    <string name="profile">Profile</string>
+    <string name="welcomemessage"><b>Welcome</b>, Aarush</string>
+    <string name="checkperformance">Check your overall Trip Performance </string>
+    <string name="menuicon">menuicon</string>
+    <string name="profile_picture">Profile picture</string>
+    <string name="trip_performance_percentage">84%</string>
+    <string name="tripdetailbox">tripdetailbox</string>
+    <string name="todo">TODO</string>
+</resources>
