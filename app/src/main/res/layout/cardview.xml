@@ -3,12 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/white">
+    android:background="@color/background_kinda_grey">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp">
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@drawable/tripdetailbox">
 
         <ImageView
             android:id="@+id/adjustcircle"
@@ -125,7 +126,7 @@
 
             <View
                 android:id="@+id/distancetimeseparator"
-                android:layout_width="3dp"
+                android:layout_width="2.5dp"
                 android:layout_height="62dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
@@ -164,7 +165,7 @@
 
             <View
                 android:id="@+id/timespeedseparator"
-                android:layout_width="3dp"
+                android:layout_width="2.5dp"
                 android:layout_height="62dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
@@ -218,6 +219,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="Total Alerts: 12"
+            android:textColor="@color/total_alerts_text_colour"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@id/dot1"
             app:layout_constraintStart_toEndOf="@id/dot1"
@@ -236,6 +238,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:textColor="@color/total_alerts_text_colour"
             android:text="7.5% poor performance than last trip"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@id/dot2"
@@ -246,6 +249,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="17 June 2021, 05:40 pm"
+            android:textColor="@color/date_and_time_text_colour"
             app:layout_constraintTop_toBottomOf="@id/dot2"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="16dp"

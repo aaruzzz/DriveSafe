@@ -11,4 +11,8 @@
     <color name="usedblack">#121212</color>
     <color name="greenprogressbar">#3EEF85</color>
     <color name="orangeprogressbar">#EFA83E</color>
+    <color name="background_kinda_grey">#DDDDDD</color>
+    <color name="total_alerts_text_colour">#4B4B4B</color>
+    <color name="date_and_time_text_colour">#848484</color>
+    <color name="background">#F1F1F1</color>
 </resources>
