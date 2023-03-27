@@ -168,11 +168,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/recyclerview" />
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/Theme.DriveSafe.AppBarOverlay"
-        app:layout_constraintBottom_toBottomOf="parent">
+
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/bottomtoolbar"
@@ -180,6 +176,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             android:backgroundTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:popupTheme="@style/Theme.DriveSafe.PopupOverlay">
 
             <LinearLayout
@@ -215,12 +212,11 @@
                     android:gravity="center"
                     android:text="@string/profile"
                     android:textColor="@color/black"
-                    app:drawableTopCompat="@drawable/profile" />
+                    app:drawableTopCompat="@drawable/baseline_account_circle_24" />
 
             </LinearLayout>
 
         </androidx.appcompat.widget.Toolbar>
 
-    </com.google.android.material.appbar.AppBarLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
