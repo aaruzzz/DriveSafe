@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -52,14 +54,73 @@ public class SecondFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
 
-        binding.whatishappening.setOnClickListener(new View.OnClickListener() {
+        binding.dashboardtext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(SecondFragment.this)
                         .navigate(R.id.action_SecondFragment_to_ThirdFragment);
             }
         });
+
+        binding.bottomtoolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(SecondFragment.this)
+                        .navigate(R.id.action_SecondFragment_to_ReportFragment);
+            }
+        });
+
+        binding.menubar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(SecondFragment.this)
+                        .navigate(R.id.action_SecondFragment_to_MenuFragment);
+            }
+        });
+
+
+
+        binding.bottomtoolbar.setOnItemSelectedListener(item -> {
+            switch (item.getItemId()){
+
+                case R.id.dashboard_bottom_nav:
+                     break;
+                case R.id.report_bottom_nav:
+                    NavHostFragment.findNavController(SecondFragment.this)
+                            .navigate(R.id.action_SecondFragment_to_ReportFragment);
+                    break;
+                case R.id.profile_bottom_nav:
+                    NavHostFragment.findNavController(SecondFragment.this)
+                            .navigate(R.id.action_SecondFragment_to_ProfileFragment);
+                    break;
+            }
+            return true;
+        });
+
+
+//        binding.bottomtoolbar.setOnItemSelectedListener(item -> {
+//            switch (item.getItemId()){
+//
+//                case R.id.dashboard_bottom_nav:
+//                    replaceFragment(new SecondFragment());
+//                    break;
+//                case R.id.report_bottom_nav:
+//                    replaceFragment(new ReportFragment());
+//                    break;
+//                case R.id.profile_bottom_nav:
+//                    replaceFragment(new ProfileFragment());
+//                    break;
+//            }
+//            return true;
+//        });
     }
+
+//    private void replaceFragment(Fragment fragment){
+//        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//        fragmentTransaction.replace(R.id.dashboard_fragment,fragment);
+//        fragmentTransaction.commit();
+//    }
 
     @Override
     public void onDestroyView() {

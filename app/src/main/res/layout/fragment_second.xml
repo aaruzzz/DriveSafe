@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/dashboard_fragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_kinda_grey"
     tools:context=".SecondFragment">
+
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/leftguideline"
@@ -38,14 +42,17 @@
             android:paddingStart="16dp"
             android:paddingEnd="16dp">
 
-            <ImageView
-                android:layout_width="25dp"
+            <ImageButton
+                android:id="@+id/menubar"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="5dp"
                 android:contentDescription="@string/menuicon"
-                android:src="@drawable/menuicon"
+                android:src="@drawable/baseline_view_headline_24"
+                android:background="@color/usedblack"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
             <ImageView
                 android:id="@+id/profilepic"
@@ -61,6 +68,9 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/welcomebox"
         android:layout_width="fill_parent"
@@ -73,150 +83,173 @@
             android:layout_height="match_parent"
             android:contentDescription="@string/dashboard"
             android:src="@drawable/blackbox"
-
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-                <TextView
-                    android:id="@+id/welcomemessage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/welcomemessage"
-                    android:textColor="@color/white"
-                    android:textSize="25sp"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toTopOf="@id/tripperformancetext"/>
+        <TextView
+            android:id="@+id/welcomemessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/welcomemessage"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@id/tripperformancetext"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/tripperformancetext"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="3dp"
-                    android:text="@string/checkperformance"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
-                    app:drawableEndCompat="@drawable/ic_rightarrow"
-                    app:layout_constraintTop_toBottomOf="@id/welcomemessage"
-                    app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:id="@+id/tripperformancetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="3dp"
+            android:text="@string/checkperformance"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:drawableEndCompat="@drawable/ic_rightarrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/welcomemessage" />
 
 
-                <ProgressBar
-                    android:id="@+id/progressbar1"
-                    style="?android:attr/progressBarStyleHorizontal"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_marginEnd="8dp"
-                    android:indeterminate="false"
-                    android:max="100"
-                    android:progress="84"
-                    android:progressDrawable="@drawable/greenprogressbar"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
+        <ProgressBar
+            android:id="@+id/progressbar1"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="8dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="84"
+            android:progressDrawable="@drawable/greenprogressbar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/trip_performance_percentage"
-                    android:textColor="@color/white"
-                    android:textSize="11sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="@id/progressbar1"
-                    app:layout_constraintEnd_toEndOf="@id/progressbar1"
-                    app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trip_performance_percentage"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/progressbar1"
+            app:layout_constraintStart_toStartOf="@id/progressbar1"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    <TextView
+    <Button
         android:id="@+id/dashboardtext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:padding="0dp"
         android:text="@string/dashboard"
+        android:textColor="@color/total_alerts_text_colour"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
         app:layout_constraintStart_toStartOf="@id/leftguideline"
         app:layout_constraintTop_toBottomOf="@id/welcomebox" />
 
+    <!--    <ScrollView-->
+    <!--        android:id="@+id/scroll_view_trips"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:paddingHorizontal="8dp"-->
+    <!--        app:layout_constraintStart_toEndOf="@id/leftguideline"-->
+    <!--        app:layout_constraintEnd_toStartOf="@id/rightguideline"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/dashboardtext"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/bottomtoolbar">-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:background="@color/background_kinda_grey"
         android:paddingHorizontal="8dp"
-        app:layout_constraintStart_toEndOf="@id/leftguideline"
+        app:layout_constraintBottom_toTopOf="@+id/bottomtoolbar"
         app:layout_constraintEnd_toStartOf="@id/rightguideline"
+        app:layout_constraintStart_toEndOf="@id/leftguideline"
         app:layout_constraintTop_toBottomOf="@id/dashboardtext"
-        tools:listitem="@layout/cardview"
-        android:background="@color/background_kinda_grey"/>
-
-        <Button
-            android:id="@+id/whatishappening"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Trip Details"
-            app:layout_constraintBottom_toBottomOf="@id/recyclerview"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/recyclerview" />
+        tools:listitem="@layout/cardview" />
+    <!--    </ScrollView>-->
 
 
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/bottomtoolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            android:backgroundTint="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:popupTheme="@style/Theme.DriveSafe.PopupOverlay">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/dashboard"
-                    android:textColor="@color/black"
-                    app:drawableTopCompat="@drawable/dashboard" />
+    <!--    <Button-->
+    <!--            android:id="@+id/tripdetailbtn"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Trip Details"-->
+    <!--            android:background="@color/black"-->
+    <!--            app:layout_constraintBottom_toBottomOf="@id/recyclerview"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="@id/recyclerview" />-->
 
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/report"
-                    android:textColor="@color/black"
-                    app:drawableTopCompat="@drawable/report" />
+    <!--        <androidx.appcompat.widget.Toolbar-->
+    <!--            android:id="@+id/bottomtoolbar"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="?attr/actionBarSize"-->
+    <!--            android:background="?attr/colorPrimary"-->
+    <!--            android:backgroundTint="@color/white"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:popupTheme="@style/Theme.DriveSafe.PopupOverlay">-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_gravity="center"-->
+    <!--                android:orientation="horizontal">-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_weight="1"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:text="@string/dashboard"-->
+    <!--                    android:textColor="@color/black"-->
+    <!--                    app:drawableTopCompat="@drawable/dashboard" />-->
 
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="@string/profile"
-                    android:textColor="@color/black"
-                    app:drawableTopCompat="@drawable/baseline_account_circle_24" />
+    <!--                <TextView-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_weight="1"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:text="@string/report"-->
+    <!--                    android:textColor="@color/black"-->
+    <!--                    app:drawableTopCompat="@drawable/report" />-->
 
-            </LinearLayout>
 
-        </androidx.appcompat.widget.Toolbar>
+    <!--                <TextView-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_weight="1"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:text="@string/profile"-->
+    <!--                    android:textColor="@color/black"-->
+    <!--                    app:drawableTopCompat="@drawable/baseline_account_circle_24" />-->
+
+    <!--            </LinearLayout>-->
+    <!--    -->
+    <!--    -->
+
+    <!--        </androidx.appcompat.widget.Toolbar>-->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomtoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation_items" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

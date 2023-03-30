@@ -23,8 +23,20 @@
         tools:layout="@layout/fragment_second">
 
         <action
+            android:id="@+id/action_SecondFragment_to_MenuFragment"
+            app:destination="@+id/menuFragment" />
+
+        <action
             android:id="@+id/action_SecondFragment_to_ThirdFragment"
             app:destination="@id/ThirdFragment" />
+
+        <action
+            android:id="@+id/action_SecondFragment_to_ReportFragment"
+            app:destination="@id/reportFragment" />
+
+        <action
+            android:id="@+id/action_SecondFragment_to_ProfileFragment"
+            app:destination="@+id/profileFragment" />
     </fragment>
 
     <fragment
@@ -37,4 +49,33 @@
             app:destination="@id/SecondFragment" />
 
     </fragment>
+
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.example.drivesafe.ReportFragment"
+        android:label="ReportFragment">
+
+        <action
+            android:id="@+id/action_ReportFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.drivesafe.ProfileFragment"
+        android:label="ProfileFragment">
+
+        <action
+            android:id="@+id/action_ProfileFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.drivesafe.MenuFragment"
+        android:label="MenuFragment">
+        <action
+            android:id="@+id/action_MenuFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+
+    </fragment>
+
 </navigation>

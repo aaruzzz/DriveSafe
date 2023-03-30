@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
@@ -46,7 +51,7 @@
 
         </androidx.appcompat.widget.Toolbar>
 
-    
+
 
         <ImageView
             android:id="@+id/timelogo_tripdetailspage"
@@ -56,7 +61,7 @@
             app:layout_constraintTop_toBottomOf="@id/toptoolbar_tripdetails"
             app:layout_constraintStart_toEndOf="@id/leftguideline"
             android:paddingTop="16dp"/>
-    
+
     <TextView
         android:id="@+id/dateandtime_tripdetailspage"
         android:layout_width="wrap_content"
@@ -259,6 +264,7 @@
         app:layout_constraintStart_toEndOf="@id/leftguideline"/>
 
     <TextView
+        android:id="@+id/total_alert_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Total Alerts: 12"
@@ -266,6 +272,30 @@
         app:layout_constraintStart_toEndOf="@id/alert_bell_icon"
         app:layout_constraintTop_toTopOf="@id/alert_bell_icon"
         app:layout_constraintBottom_toBottomOf="@id/alert_bell_icon"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:minHeight="60dp"
+        android:minWidth="220dp"
+        app:layout_constraintTop_toBottomOf="@id/total_alert_text"
+        app:layout_constraintStart_toEndOf="@id/leftguideline"
+        app:layout_constraintEnd_toStartOf="@id/rightguideline"
+
+        />
+
+    <View
+        android:id="@+id/rectangle_9"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/progressBar"
+        app:layout_constraintStart_toEndOf="@id/leftguideline"
+        app:layout_constraintEnd_toStartOf="@id/rightguideline"
+        />
 
 
 
@@ -275,3 +305,5 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

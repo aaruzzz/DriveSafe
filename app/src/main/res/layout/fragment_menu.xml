@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/dashboard_fragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftguideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".1" />
+
+<ImageButton
+    android:id="@+id/menuFragmentButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/baseline_close_24"
+    android:background="@color/white"
+    app:layout_constraintEnd_toStartOf="@id/leftguideline"
+    app:layout_constraintTop_toTopOf="parent"
+    android:paddingTop="20dp"/>
+
+    <ImageView
+        android:id="@+id/profile_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/profilepic"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/leftguideline"
+        android:layout_marginTop="75dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/profile_photo"
+        app:layout_constraintTop_toTopOf="@id/profile_photo"
+        app:layout_constraintBottom_toBottomOf="@id/profile_photo"
+        android:layout_marginStart="15dp"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aarush"
+        android:textStyle="bold"
+        android:textColor="@color/total_alerts_text_colour"/>
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="shadowtimals@gmail.com"
+        android:textSize="8sp"
+        android:textColor="@color/total_alerts_text_colour"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
