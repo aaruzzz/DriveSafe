@@ -11,11 +11,9 @@
    - This repo contains UI design which is coded to learn UI. The original design can be found on [Figma](https://www.figma.com/file/INva89ILCXxmfoUkJCyhva/Drivesafe?node-id=0%3A1&t=cOq1wsA0yzDwwxD8-1) 
    
    
-
+</details>
 ---
-
-
----
+   
 <details>
    <summary> Screenshots: </summary>
  
