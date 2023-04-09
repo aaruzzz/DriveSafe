@@ -1,12 +1,17 @@
 # Welcome to DriveSafe Repo! 👋 
 
 ---
-
+<details>
+   <summary>
 - Screenshots:
+   </summary>
+ 
 
 <img align="left" alt="Landing Page" width="250px" src="./img/landing_page.jpeg" />
 <img align="left" alt="Dashboard" width="250px" src="./img/dashboard.jpeg" />
 <img align="left" alt="Dashboard 2" width="250px" src="./img/dashboard2.jpeg" />
+  
+</details>
 
 <br /><br />
 
