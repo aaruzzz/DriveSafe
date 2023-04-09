@@ -13,11 +13,11 @@
   
 </details>
 
-<br /><br />
+<br>
 
                     Landing Page                    Dashboard
                     
-<br /><br />
+<br/>
 
 
 <img align="left" alt="Trip Detail Page" width="250px" src="./img/trip_detail_page.jpeg" />
