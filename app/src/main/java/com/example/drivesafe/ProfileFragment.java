@@ -32,8 +32,8 @@ public class ProfileFragment extends Fragment {
         binding.profileFragmentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(ProfileFragment.this)
-                        .navigate(R.id.action_ProfileFragment_to_SecondFragment);
+                NavHostFragment.findNavController(ProfileFragment.this).popBackStack();
+//                        .navigate(R.id.action_ProfileFragment_to_SecondFragment);
             }
         });
     }

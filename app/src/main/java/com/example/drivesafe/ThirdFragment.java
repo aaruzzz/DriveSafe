@@ -32,8 +32,8 @@ public class ThirdFragment extends Fragment {
         binding.thirdFragmentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(ThirdFragment.this)
-                        .navigate(R.id.action_ThirdFragment_to_SecondFragment);
+                NavHostFragment.findNavController(ThirdFragment.this).popBackStack();
+//                        .navigate(R.id.action_ThirdFragment_to_SecondFragment);
             }
         });
     }

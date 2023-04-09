@@ -32,8 +32,8 @@ public class ReportFragment extends Fragment {
         binding.reportFragmentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(ReportFragment.this)
-                        .navigate(R.id.action_ReportFragment_to_SecondFragment);
+                NavHostFragment.findNavController(ReportFragment.this).popBackStack();
+//                        .navigate(R.id.action_ReportFragment_to_SecondFragment);
             }
         });
     }
