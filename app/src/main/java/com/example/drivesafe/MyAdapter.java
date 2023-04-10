@@ -29,6 +29,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.addr1View.setText(items.get(position).getAddr1());
         holder.addr2View.setText(items.get(position).getAddr2());
+        holder.percentage_View.setText(items.get(position).getPercentage());
+        holder.total_distance_View.setText(items.get(position).getTotalDistance());
+        holder.total_time_View.setText(items.get(position).getTotalTime());
+        holder.highest_speed_View.setText(items.get(position).getHighestSpeed());
+        holder.total_alerts_View.setText(items.get(position).getTotalAlerts());
+        holder.performance_percentage_View.setText(items.get(position).getPerformancePercentage());
+        holder.performance_status_View.setText(items.get(position).getPerformanceStatus());
+        holder.date_and_time_View.setText(items.get(position).getDateandTime());
     }
 
     @Override

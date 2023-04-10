@@ -28,9 +28,8 @@
             android:id="@+id/reportFragmentButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/baseline_arrow_right_alt_24"
+            android:src="@drawable/baseline_arrow_back_24"
             android:background="@color/black"
-            android:rotation="180"
             />
 
 

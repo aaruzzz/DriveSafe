@@ -7,10 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.fragment.NavHostFragment;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -36,10 +33,10 @@ public class SecondFragment extends Fragment {
 
         List<Item> items = new ArrayList<Item>();
 
-        items.add(new Item("Home", "Barcelona"));
-        items.add(new Item("Kathmandu", "London"));
-        items.add(new Item("Chabahil", "Bhaktapur"));
-        items.add(new Item("Home", "Barcelona"));
+        items.add(new Item("Home", "Barcelona", "71%", "200 Km", "1 h 32 m", "140 km/h", "12", "7.5"," poor", "17 June 2021, 05:40 pm"));
+        items.add(new Item("Kathmandu", "London", "18%","300 Km", "1 h 11 m", "160 km/h", "17", "17.5"," poor", "17 June 2021, 11:40 am"));
+        items.add(new Item("Chabahil", "Bhaktapur", "97%","250 Km", "1 h 56 m", "49 km/h", "2", "27.5"," better", "17 June 2021, 8:11 pm"));
+        items.add(new Item("Home", "Barcelona", "69%","150 Km", "1 h 32 m", "140 km/h", "12", "7.5"," poor", "17 June 2021, 05:40 pm"));
 
 
 

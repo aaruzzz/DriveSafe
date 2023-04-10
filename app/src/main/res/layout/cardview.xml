@@ -70,7 +70,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ProgressBar
-                android:id="@+id/progressbar1"
+                android:id="@+id/progressbar2"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
@@ -82,6 +82,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/card_percentage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="74%"
@@ -113,6 +114,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
+                    android:id="@+id/card_distance_in_km"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -149,6 +151,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
+                    android:id="@+id/card_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1 h 32 m"
@@ -188,6 +191,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
+                    android:id="@+id/card_highest_speed"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -217,15 +221,27 @@
             app:layout_constraintTop_toBottomOf="@id/container_with_curved_edges" />
 
         <TextView
+            android:id="@+id/total_alert_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="Total Alerts: 12"
+            android:text="Total Alerts: "
             android:textColor="@color/total_alerts_text_colour"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@id/dot1"
             app:layout_constraintStart_toEndOf="@id/dot1"
             app:layout_constraintTop_toTopOf="@id/dot1" />
+
+        <TextView
+            android:id="@+id/card_total_alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12"
+            android:textColor="@color/total_alerts_text_colour"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/total_alert_text"
+            app:layout_constraintStart_toEndOf="@id/total_alert_text"
+            app:layout_constraintTop_toTopOf="@id/total_alert_text" />
 
         <ImageView
             android:id="@+id/dot2"
@@ -237,17 +253,40 @@
             app:layout_constraintTop_toBottomOf="@id/dot1" />
 
         <TextView
+            android:id="@+id/card_performance_percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:textColor="@color/total_alerts_text_colour"
-            android:text="7.5% poor performance than last trip"
+            android:text="7.5%"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@id/dot2"
             app:layout_constraintStart_toEndOf="@id/dot2"
             app:layout_constraintTop_toTopOf="@id/dot2" />
 
         <TextView
+            android:id="@+id/card_performance_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/total_alerts_text_colour"
+            android:text=" poor"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/card_performance_percent"
+            app:layout_constraintStart_toEndOf="@id/card_performance_percent"
+            app:layout_constraintTop_toTopOf="@id/card_performance_percent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/total_alerts_text_colour"
+            android:text=" performance than last trip"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/card_performance_status"
+            app:layout_constraintStart_toEndOf="@id/card_performance_status"
+            app:layout_constraintTop_toTopOf="@id/card_performance_status" />
+
+        <TextView
+            android:id="@+id/card_date_and_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="17 June 2021, 05:40 pm"
